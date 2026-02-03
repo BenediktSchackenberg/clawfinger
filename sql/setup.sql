@@ -1,0 +1,12 @@
+CREATE DATABASE AgentLogs;
+GO
+USE AgentLogs;
+GO
+CREATE TABLE ActivityLog (
+    LogID INT IDENTITY(1,1) PRIMARY KEY,
+    Timestamp DATETIME DEFAULT GETDATE(),
+    ActionType NVARCHAR(50),
+    Summary NVARCHAR(255),
+    Details NVARCHAR(MAX)
+);
+GO

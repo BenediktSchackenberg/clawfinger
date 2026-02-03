@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Site</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --accent-color: #0066cc;
+            --meta-color: #666666;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #111111;
+                --text-color: #eeeeee;
+                --accent-color: #4da6ff;
+                --meta-color: #999999;
+            }
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: var(--meta-color);
+        }
+
+        .post-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .post-item {
+            margin-bottom: 40px;
+        }
+
+        .post-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .post-title a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .post-title a:hover {
+            color: var(--accent-color);
+        }
+
+        .post-meta {
+            font-size: 0.9rem;
+            color: var(--meta-color);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .post-excerpt {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: var(--meta-color);
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">RSS</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Hi, I'm Benedikt.</h1>
+        <p class="intro">
+            Building digital products and exploring AI. <br>
+            Welcome to my corner of the internet.
+        </p>
+
+        <ul class="post-list">
+            <li class="post-item">
+                <span class="post-meta">Feb 03, 2026 • 4 min read</span>
+                <span class="post-title"><a href="#">Starting with Vibe Coding</a></span>
+                <p class="post-excerpt">
+                    How I built this website just by describing the vibe to my AI assistant. No complex frameworks, just pure intent.
+                </p>
+            </li>
+
+            <li class="post-item">
+                <span class="post-meta">Jan 28, 2026 • 6 min read</span>
+                <span class="post-title"><a href="#">My smart home setup</a></span>
+                <p class="post-excerpt">
+                    Why I switched to Home Assistant and how it changed my daily routine. A deep dive into automation.
+                </p>
+            </li>
+
+            <li class="post-item">
+                <span class="post-meta">Dec 15, 2025 • 3 min read</span>
+                <span class="post-title"><a href="#">Digital Minimalism</a></span>
+                <p class="post-excerpt">
+                    Cleaning up my digital footprint and focusing on what matters. Less noise, more signal.
+                </p>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <span>© 2026 Benedikt Schackenberg</span>
+        <span>Made with OpenClaw</span>
+    </footer>
+
+</body>
+</html>
