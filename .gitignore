@@ -1,5 +1,25 @@
+# Credentials and sensitive files
 credentials/
+*.key
+*.pem
 openclaw.json
+**/auth-profiles.json
+
+# Database scripts with embedded passwords
+*.js
+
+# SQL and DB files
+sql/
+
+# Media and temp
 media/
+*.tmp
+*.log
+
+# Node
 node_modules/
-.npm/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
