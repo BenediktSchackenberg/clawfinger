@@ -1,16 +1,18 @@
 const { execSync } = require('child_process');
 const sql = require('mssql');
+const fs = require('fs');
+const path = require('path');
 
-// SQL Config (Remote Server)
+// Load config from config.json
+const configPath = path.join(__dirname, 'config.json');
+if (!fs.existsSync(configPath)) {
+    console.error('❌ config.json not found! Copy config.example.json to config.json and set your credentials.');
+    process.exit(1);
+}
+const appConfig = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const config = {
-    user: 'sa',
-    password: '05Mainz05',
-    server: '192.168.0.38',
-    database: 'AgentLogs',
-    options: {
-        encrypt: false,
-        trustServerCertificate: true
-    }
+    ...appConfig.sql,
+    database: 'AgentLogs'
 };
 
 async function syncNodes() {

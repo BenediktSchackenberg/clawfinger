@@ -1,14 +1,12 @@
-# Credentials and sensitive files
+# Credentials and config
+config.json
 credentials/
 *.key
 *.pem
 openclaw.json
 **/auth-profiles.json
 
-# Database scripts with embedded passwords
-*.js
-
-# SQL and DB files
+# SQL setup scripts (contain server details)
 sql/
 
 # Media and temp
